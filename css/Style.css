@@ -1,0 +1,237 @@
+body{
+
+display: grid;
+justify-content: center;
+grid-template-columns: 80vw;
+grid-template-rows: 10vh 1fr;
+grid-template-areas:
+"header"
+"contenedor"
+
+;
+
+
+}
+
+.estilo {
+margin-top: 3%;
+margin-bottom: 3%;
+margin-left:20%;
+
+
+}
+input{
+    accent-color: #B6014C;
+    cursor: pointer;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  
+}
+
+
+label{
+    cursor: pointer;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    box-shadow: 0 0 5px;
+     padding: 5px;
+}
+.letraPequena {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #B6014C;
+}
+.letraGrande {
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 0;
+    color: #B6014C;
+}
+
+
+.contenedor {
+    grid-area: contenedor;
+    width: 80vw;
+    box-shadow: 0 0 5px;
+    padding: 5px;
+    margin-top: 10px;
+    display: grid;
+
+  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "tipoDoc            nodoc"
+    "pNombre            sNombre"
+    "pApellido          sApellido"
+    "fechaNacimiento    lugarNacimiento"
+    "genero             correoElectronico"
+    "mensaje            mensaje"
+    "enviar             enviar"
+    
+    ;
+}
+
+
+
+.tipoDoc{
+    grid-area: tipoDoc;
+    
+    /* display: flex;
+    justify-content: center; */
+    /* margin: 10px; */
+}
+
+.tipoDoc p{
+    margin: 0;
+    color: #B6014C;
+}
+
+.nodoc{
+    grid-area: nodoc;
+    /* display: flex;
+    justify-content: center; */
+    /* margin: 10px; */
+}
+.pNombre{
+    grid-area: pNombre;
+    /* display: flex;
+    justify-content: center; */
+    /* margin: 10px; */
+}
+.sNombre{
+    grid-area: sNombre;
+}
+
+.pApellido{
+    grid-area: pApellido;
+}
+
+.sApellido{
+    grid-area: sApellido;
+}
+
+.fechaNacimiento{
+    grid-area: fechaNacimiento;
+    display: flex;
+    align-items: center;
+}
+
+.genero{
+   grid-area: genero;
+  
+}
+#Bgenero{
+    margin-top: 5%;
+    margin-right: 3%;
+    cursor: pointer;
+}
+.lugarNacimiento{
+    grid-area: lugarNacimiento;
+}
+#departamento{
+    margin-top: 5%;
+    margin-right: 3%;
+}
+.correoElectronico{
+    grid-area: correoElectronico;
+    display: flex;
+    align-items: center;
+}
+
+.mensaje{
+    grid-area: mensaje;
+}
+.obser{
+    margin-left: 10%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 1%;
+    width:77%;
+}
+
+.enviar{
+    grid-area: enviar;
+    display: flex;
+    justify-content: center;
+    
+}
+.btnEnviar {
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 90%;
+    background-color: #B6014C;
+
+}
+.btnEnviar:hover{
+    
+  cursor: pointer;
+}
+
+label.error{
+    color: #B6014C;
+    display: inline-block;
+}
+
+/* Estilos de Tabla */
+table {
+    box-shadow: 2px 2px 10px hsla(335, 99%, 36%,0.4);
+    border-collapse: collapse;
+   border: 1px solid hsla(335, 99%, 36%,0.5);
+   margin-top: 5vh;
+}
+thead{
+    border-bottom: 3px solid #B6014C;
+}
+td{
+    color: gray;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border: 1px solid hsla(335, 99%, 36%,0.5);
+   
+   
+}
+
+caption{
+    color: white;
+    background-color: #B6014C;
+    font-size: 200%;
+    font-weight: bold;
+    padding: 3vh;
+    border-bottom: 5px solid white;
+   
+}
+th{
+    color: hsl(335, 99%, 36%);
+    background-color: hsla(335, 99%, 36%,0.2);
+    border: 1px solid hsla(335, 99%, 36%,0.5);
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    text-align: center;
+
+}
+tbody{
+    
+    border: 1px solid hsla(335, 99%, 36%,0.5);  
+}
+tr:nth-child(even){
+ background-color:hsla(335, 99%, 36%,0.1) ;   
+}
+tr:hover td{
+    background-color: hsl(335, 99%, 36%);
+    color:white;
+    cursor: pointer;
+
+}
+
+
+

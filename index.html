@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="js/main.js">
+
+    <title>Encuesta</title>
+
+</head>
+<body>
+  <header class="header">
+    <div>
+        <p class="letraPequena">DEPARTAMENTO ADMINISTRATIVO</p>
+        <P class="letraGrande">NACIONAL DE ESTADISTICA</P>
+    </div><!--titulo -->
+    
+    <img src="img/Colombia_Dane_logo.svg" alt="">
+  </header>
+
+  <form action="php/insert.php" class="contenedor" id="formContenedor" method="post">
+    <div class="tipoDoc estilo">
+
+        <label class="tipoDocumento" for="TD"> Tipo Documento *
+            
+            <label for="TI">T.I <input type="radio" id="TI" name="TD" value="TI" required></label>
+            <label for="CC"> C.C <input type="radio" id="CC" name="TD" value="CC" ></label>
+            <label for="TE"> T.E <input type="radio" id="TE" name="TD" value="TE"></label>
+            <label for="CE"> C.E <input type="radio" id="CE" name="TD" value="CE"></label>
+            <!-- <p>Por favor seleccionar el Tipo de Documento</p> -->
+
+        </label>
+    </div><!-- tipoDoc -->
+
+    <div class="nodoc estilo">
+        <label for="ND">No. Docuemnto * <input type="number" name="nIdentificacion" id="ND" maxlength="10" required></label>
+
+    </div><!-- nodoc -->
+
+    <div class="pNombre estilo">
+        <label for="nombre1">Primer Nombre * <input id="nombre1" type="text" name="primerNombre" required> </label>
+    </div> <!-- pNombre -->
+   
+    <div class="sNombre estilo">
+        <label for="nombre2">Segundo Nombre <input id="nombre2" type="text" name="segundoNombre"></label>
+    </div> <!-- sNombre -->
+
+    <div class="pApellido estilo">
+        <label for="apellido1">Primer Apellido * <input id="apellido1" type="text" name="primerApellido" required></label>
+    </div> <!-- pApellido -->
+
+    <div class="sApellido estilo">
+        <label class="" for="apellido2">Segundo Apellido * <input id="apellido2" type="text" name="segundoApellido" required></label>
+    </div> <!-- sApellido -->
+
+    <div class="fechaNacimiento estilo">
+        <label for="fnaci">Fecha de Nacimiento * <input id="fnaci" type="date" name="fecNacimiento"></label>
+    </div> <!-- fechaNacimiento -->
+   
+    <div class="lugarNacimiento estilo">
+
+        <label for="">Lugar de Nacimiento * <br>
+
+            <label for="departamento">Departamento 
+                <select name="departamento" id="departamento">
+                    <option value="Cesar">Cesar</option>
+                </select>
+
+            </label>
+          
+            <label for="ciudad">Ciudad
+                <select name="ciudad" id="ciudad">
+                    <option value="Valledupar">Valledupar</option>
+                    <option value="Bosconia">Bosconia</option>
+                    <option value="La Jagua">La Jagua</option>
+                    <option value="Codazzi">Codazzi</option>
+                    <option value="Becerril">Becerril</option>
+                    <option value="El paso">El Paso</option>
+                </select>
+            </label> 
+       
+        </label>
+
+    </div><!-- lugarNacimiento -->
+    
+    <div class="genero estilo">
+        <label for="" >Genero *<br> </label>
+
+        <label for="F" id="Bgenero">Femenino <input id="F" name="genero" type="radio" value="F" required></label>
+
+        <label class="activar" for="M" id="Bgenero">Masculino <input id="M" name="genero" type="radio" value="M" required> </label>
+
+            
+
+       
+    </div><!-- genero -->
+
+    <div class="correoElectronico estilo">
+        <label for="correo">Correo Electronico * <input id="correo" type="email" name="email" required></label>
+    </div>    <!-- correoElectronico -->
+
+    <div class="mensaje">
+        <textarea class="obser" name="observacion" id="observacion"  placeholder="Observaciones"></textarea>
+
+    </div>
+
+   <div class="enviar">
+    <input class="btnEnviar" type="submit" id="btnEnviar">
+   </div>
+  </form><!-- contenedor -->
+
+   
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="js/main.js"></script>
+
+
+
+
+
+
+</body>
+</html>
